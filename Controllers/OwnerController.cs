@@ -1,4 +1,5 @@
-﻿using finalAssesmentLaBestia.Services.OwnerService;
+﻿using finalAssesmentLaBestia.Models;
+using finalAssesmentLaBestia.Services.OwnerService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,33 +17,68 @@ namespace finalAssesmentLaBestia.Controllers
             this.service = service;
         }
         [HttpGet]
-        [Route("/all")]
+        [Route("/owner/all")]
         public async Task<ActionResult<ServiceResponse<List<Owner>>>> getUsers()
         {
-            return  Ok(await service.getAllOwners());
+            ServiceResponse<List<Owner>> res = await service.getAllOwners();
+            if (res.Ok)
+            {
+               return Ok(res);
+            }
+            else
+            {
+                return BadRequest(res);
+            }
+            
         }
 
         [HttpPost]
-        [Route("/add")]
+        [Route("/owner/add")]
 
         public async Task<ActionResult<ServiceResponse<Owner>>> addOwner(Owner owner)
         {
-            return Accepted(await service.addOwner(owner));
+            ServiceResponse<Owner> res = await service.addOwner(owner);
+            if (res.Ok)
+            {
+                return Accepted(res);
+            }
+            else
+            {
+                return BadRequest(res);
+            }
+            
         }
 
         [HttpPut]
-        [Route("/edit")]
+        [Route("/owner/edit")]
 
         public async Task<ActionResult<ServiceResponse<Owner>>> editOwner(Owner owner)
         {
-            return Ok(await service.editOwner(owner));
+            ServiceResponse<Owner> res = await service.editOwner(owner);
+            if (res.Ok)
+            {
+                return Accepted(res);
+            }
+            else
+            {
+                return BadRequest(res);
+            }
+         
         }
         [HttpGet]
-        [Route("/owner")]
+        [Route("/owner/id")]
 
         public async Task<ActionResult<ServiceResponse<Owner>>> findOwner(int id)
         {
-            return Ok(await service.getOwner(id));
+            ServiceResponse<Owner> res = await service.getOwner(id);
+            if (res.Ok)
+            {
+                return Accepted(res);
+            }
+            else
+            {
+                return BadRequest(res);
+            }
         }
     }
 }

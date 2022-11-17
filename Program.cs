@@ -4,10 +4,21 @@ using finalAssesmentLaBestia.Services.OwnerService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddDbContext<DataContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("http://localhost:3000").AllowAnyHeader()
+                                                                      .AllowAnyMethod()
+                                                                      .AllowCredentials();
+
+                      });
+});
 // Add services to the container.
 
 builder.Services.AddControllers();

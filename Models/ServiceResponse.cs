@@ -7,7 +7,7 @@
         public ServiceResponse(bool ok, T? data)
         {
             Ok = ok;
-            Data =data;
+            Data = data;
         }
 
         public bool Ok { get; set; }

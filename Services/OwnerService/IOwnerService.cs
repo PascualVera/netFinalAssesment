@@ -1,5 +1,5 @@
 ﻿using finalAssesmentLaBestia.Models;
-using System.Threading.Tasks;
+
 namespace finalAssesmentLaBestia.Services.OwnerService
 {
     public interface IOwnerService

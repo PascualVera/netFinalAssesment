@@ -17,32 +17,32 @@ namespace finalAssesmentLaBestia.Controllers
         }
         [HttpGet]
         [Route("/all")]
-        public async Task<ServiceResponse<List<Owner>>> getUsers()
+        public async Task<ActionResult<ServiceResponse<List<Owner>>>> getUsers()
         {
-            return await service.getAllOwners();
+            return  Ok(await service.getAllOwners());
         }
 
         [HttpPost]
         [Route("/add")]
 
-        public async Task<ServiceResponse<Owner>> addOwner(Owner owner)
+        public async Task<ActionResult<ServiceResponse<Owner>>> addOwner(Owner owner)
         {
-            return await service.addOwner(owner);
+            return Accepted(await service.addOwner(owner));
         }
 
         [HttpPut]
         [Route("/edit")]
 
-        public async Task<ServiceResponse<Owner>> editOwner(Owner owner)
+        public async Task<ActionResult<ServiceResponse<Owner>>> editOwner(Owner owner)
         {
-            return await service.editOwner(owner);
+            return Ok(await service.editOwner(owner));
         }
         [HttpGet]
         [Route("/owner")]
 
-        public async Task<ServiceResponse<Owner>> findOwner(int id)
+        public async Task<ActionResult<ServiceResponse<Owner>>> findOwner(int id)
         {
-            return await service.getOwner(id);
+            return Ok(await service.getOwner(id));
         }
     }
 }

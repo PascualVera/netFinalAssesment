@@ -36,7 +36,7 @@ namespace finalAssesmentLaBestia.Services.OwnerService
             List<Owner> dbOwners = await context.Owners.ToListAsync();
 
             ServiceResponse<List<Owner>> serviceResponse = new ServiceResponse<List<Owner>>(true, dbOwners);
-            return serviceResponse;
+            return  serviceResponse;
         }
 
         public async Task<ServiceResponse<Owner>> getOwner(int id)

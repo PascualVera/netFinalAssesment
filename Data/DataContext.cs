@@ -15,7 +15,7 @@ namespace finalAssesmentLaBestia.Data
 
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
-        public DbSet<Claim> Claim { get; set; }
+        public DbSet<Claim> Claims { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,6 +1,8 @@
 global using finalAssesmentLaBestia.Models;
 using finalAssesmentLaBestia.Data;
+using finalAssesmentLaBestia.Services.ClaimService;
 using finalAssesmentLaBestia.Services.OwnerService;
+using finalAssesmentLaBestia.Services.VehicleService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +28,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IOwnerService, OwnerService>();
+builder.Services.AddScoped<IVehicleService, VehicleService>();
+builder.Services.AddScoped<IClaimService, ClaimService>();
 
 
 

@@ -44,7 +44,7 @@ namespace finalAssesmentLaBestia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Claim",
+                name: "Claims",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -54,9 +54,9 @@ namespace finalAssesmentLaBestia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Claim", x => x.id);
+                    table.PrimaryKey("PK_Claims", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Claim_Vehicles_vehicle_id",
+                        name: "FK_Claims_Vehicles_vehicle_id",
                         column: x => x.vehicleid,
                         principalTable: "Vehicles",
                         principalColumn: "id",
@@ -64,8 +64,8 @@ namespace finalAssesmentLaBestia.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Claim_vehicle_id",
-                table: "Claim",
+                name: "IX_Claims_vehicle_id",
+                table: "Claims",
                 column: "vehicle_id");
 
             migrationBuilder.CreateIndex(
@@ -78,7 +78,7 @@ namespace finalAssesmentLaBestia.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Claim");
+                name: "Claims");
 
             migrationBuilder.DropTable(
                 name: "Vehicles");

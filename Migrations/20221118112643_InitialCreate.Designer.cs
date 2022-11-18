@@ -11,7 +11,7 @@ using finalAssesmentLaBestia.Data;
 namespace finalAssesmentLaBestia.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221117095009_InitialCreate")]
+    [Migration("20221118112643_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -43,7 +43,7 @@ namespace finalAssesmentLaBestia.Migrations
 
                     b.HasIndex("vehicle_id");
 
-                    b.ToTable("Claim");
+                    b.ToTable("Claims");
                 });
 
             modelBuilder.Entity("finalAssesmentLaBestia.Models.Owner", b =>

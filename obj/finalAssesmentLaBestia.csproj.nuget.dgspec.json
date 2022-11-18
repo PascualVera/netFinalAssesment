@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj": {}
+    "C:\\Proyectos\\netAssessmentBackend\\netFinalAssesment\\finalAssesmentLaBestia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj": {
+    "C:\\Proyectos\\netAssessmentBackend\\netFinalAssesment\\finalAssesmentLaBestia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj",
+        "projectUniqueName": "C:\\Proyectos\\netAssessmentBackend\\netFinalAssesment\\finalAssesmentLaBestia.csproj",
         "projectName": "finalAssesmentLaBestia",
-        "projectPath": "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj",
-        "packagesPath": "C:\\Users\\Pascual.Vera\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\obj\\",
+        "projectPath": "C:\\Proyectos\\netAssessmentBackend\\netFinalAssesment\\finalAssesmentLaBestia.csproj",
+        "packagesPath": "C:\\Users\\Antonio.Ortiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\netAssessmentBackend\\netFinalAssesment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pascual.Vera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Antonio.Ortiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -74,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

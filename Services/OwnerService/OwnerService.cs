@@ -34,7 +34,9 @@ namespace finalAssesmentLaBestia.Services.OwnerService
             {
                 Owner owner = await context.Owners.FirstAsync(owner => owner.id == updateOwner.id);
 
-                owner.name = updateOwner.name;
+                owner.FirstName = updateOwner.FirstName;
+                owner.LastName = updateOwner.LastName;
+                owner.DriverLicense = updateOwner.DriverLicense;
                 await context.SaveChangesAsync();
 
                 return new ServiceResponse<Owner>(true, owner);

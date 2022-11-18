@@ -19,6 +19,9 @@ namespace finalAssesmentLaBestia.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            new DbInitiliazer(modelBuilder).seed();
+
             modelBuilder.Entity<Owner>()
                 .HasKey(b => b.id)
                 .HasName("PrimaryKey_Id");
@@ -26,12 +29,12 @@ namespace finalAssesmentLaBestia.Data
             modelBuilder.Entity<Vehicle>()
                .HasOne<Owner>()
                .WithMany()
-               .HasForeignKey(p => p.owner_id);
+               .HasForeignKey(p => p.Owner_id);
 
             modelBuilder.Entity<Claim>()
                 .HasOne<Vehicle>()
                 .WithMany()
-                .HasForeignKey(p => p.vehicle_id);
+                .HasForeignKey(p => p.Vehicle_id);
         }
     }
     

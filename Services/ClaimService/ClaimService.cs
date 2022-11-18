@@ -33,8 +33,11 @@ namespace finalAssesmentLaBestia.Services.ClaimService
             {
                 Claim Claim = await context.Claims.FirstAsync(Claim => Claim.id == updatedClaim.id);
 
-                Claim.claimType = updatedClaim.claimType;
-                Claim.vehicle_id = updatedClaim.vehicle_id == default(int) ? Claim.vehicle_id : updatedClaim.vehicle_id;
+                Claim.Description = updatedClaim.Description;
+                Claim.Status = updatedClaim.Status;
+                Claim.Date = updatedClaim.Date;
+                Claim.Vehicle_id = updatedClaim.Vehicle_id == default(int) ? Claim.Vehicle_id : updatedClaim.Vehicle_id;
+                
                 await context.SaveChangesAsync();
 
                 return new ServiceResponse<Claim>(true, Claim);
@@ -75,7 +78,7 @@ namespace finalAssesmentLaBestia.Services.ClaimService
         {
             try
             {
-                List<Claim> Claims = await context.Claims.Where(Claim => Claim.vehicle_id == vehicleid).ToListAsync();
+                List<Claim> Claims = await context.Claims.Where(Claim => Claim.Vehicle_id == vehicleid).ToListAsync();
                 return new ServiceResponse<List<Claim>>(true, Claims);
             }
             catch(Exception ex)

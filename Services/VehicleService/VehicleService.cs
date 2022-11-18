@@ -33,8 +33,11 @@ namespace finalAssesmentLaBestia.Services.VehicleService
             {
                 Vehicle vehicle = await context.Vehicles.FirstAsync(vehicle => vehicle.id == updatedVehicle.id);
 
-                vehicle.name = updatedVehicle.name;
-                vehicle.owner_id = updatedVehicle.owner_id == default(int) ? vehicle.owner_id : updatedVehicle.owner_id;
+                vehicle.Brand = updatedVehicle.Brand;
+                vehicle.Vin = updatedVehicle.Vin;
+                vehicle.Color = updatedVehicle.Color;
+                vehicle.Year = updatedVehicle.Year;
+                vehicle.Owner_id = updatedVehicle.Owner_id == default(int) ? vehicle.Owner_id : updatedVehicle.Owner_id;
                 await context.SaveChangesAsync();
 
                 return new ServiceResponse<Vehicle>(true, vehicle);
@@ -75,7 +78,7 @@ namespace finalAssesmentLaBestia.Services.VehicleService
         {
             try
             {
-                List<Vehicle> vehicles = await context.Vehicles.Where(vehicle => vehicle.owner_id == owner_id).ToListAsync();
+                List<Vehicle> vehicles = await context.Vehicles.Where(vehicle => vehicle.Owner_id == owner_id).ToListAsync();
                 return new ServiceResponse<List<Vehicle>>(true, vehicles);
             }
             catch(Exception ex)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj": {}
+    "C:\\Users\\Pascual.Vera\\labestianet\\netFinalAssesment\\finalAssesmentLaBestia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj": {
+    "C:\\Users\\Pascual.Vera\\labestianet\\netFinalAssesment\\finalAssesmentLaBestia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj",
+        "projectUniqueName": "C:\\Users\\Pascual.Vera\\labestianet\\netFinalAssesment\\finalAssesmentLaBestia.csproj",
         "projectName": "finalAssesmentLaBestia",
-        "projectPath": "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj",
+        "projectPath": "C:\\Users\\Pascual.Vera\\labestianet\\netFinalAssesment\\finalAssesmentLaBestia.csproj",
         "packagesPath": "C:\\Users\\Pascual.Vera\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\obj\\",
+        "outputPath": "C:\\Users\\Pascual.Vera\\labestianet\\netFinalAssesment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pascual.Vera\\AppData\\Roaming\\NuGet\\NuGet.Config",

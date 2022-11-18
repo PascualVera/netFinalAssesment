@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uPlG0Z54gLlaHoxQfuqbUBsGipo148+OgpeH413QYePnpi5f/yaxetjIxadrL1VMiwFoSd1UhX0uCCgYchDwOw==",
+  "dgSpecHash": "KDi2pYKNPovI6YLnCAWqj3oJRHseJUwq/y3o2YiI6RPC7kzHMEFzKsgp/2bEmoB+41fYg4ykmbOZyaAGr0afiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pascual.Vera\\miscosas\\finalAssesmentLaBestia\\finalAssesmentLaBestia.csproj",
+  "projectFilePath": "C:\\Users\\Pascual.Vera\\labestianet\\netFinalAssesment\\finalAssesmentLaBestia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pascual.Vera\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Pascual.Vera\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
